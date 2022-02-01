@@ -1,2 +1,2 @@
-import "../scss/test.scss";
+import "../scss/loginsan/loginsan.scss";
 console.log("Home")
