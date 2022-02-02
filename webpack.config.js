@@ -88,10 +88,14 @@ module.exports = (env, argv) => {
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'login.html',
-                template: `${TEMPLATE_PATH}/login.html`,
+                filename: 'mypage/mypage.html',
+                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/changemypage.html',
+                template: `${TEMPLATE_PATH}/mypage/changemypage.html`,
             })
-            // new BundleAnalyzerPlugin()
+            // new BundleAnalyzerPlugin() 
         ],
         optimization: {
             runtimeChunk: 'single' // chunk 변경시 매번 새로고침하기 불편해서 적용
