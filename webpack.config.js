@@ -85,13 +85,13 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
             new HtmlWebpackPlugin({
+                // template: `${TEMPLATE_PATH}/home.html`,
                 template: `${TEMPLATE_PATH}/mypage/mypage.html`,
             }),
-            // new HtmlWebpackPlugin({  // Also generate a test.html
-            //     filename: 'login/login.html',
-            //     template: `${TEMPLATE_PATH}/login/login.html`,
-            // })
-            // new BundleAnalyzerPlugin()
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: '/login/login.html',
+                template: `${TEMPLATE_PATH}/login/login.html`,
+            })            // new BundleAnalyzerPlugin()
         ],
         optimization: {
             runtimeChunk: 'single' // chunk 변경시 매번 새로고침하기 불편해서 적용
