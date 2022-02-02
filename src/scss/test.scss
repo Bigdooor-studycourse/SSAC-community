@@ -1,5 +1,12 @@
 @import "./mypage/mypage.scss";
-@import "./mypage/changemypage.scss";
+@import "./mypage/reset.scss";
 
-
-
+div,
+h1,
+span,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
