@@ -91,7 +91,40 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({  // Also generate a test.html
                 filename: '/login/login.html',
                 template: `${TEMPLATE_PATH}/login/login.html`,
-            })            // new BundleAnalyzerPlugin()
+            }),            // new BundleAnalyzerPlugin()
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                template: `${TEMPLATE_PATH}/login.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/loginsan.html',
+                template: `${TEMPLATE_PATH}/loginsan/loginsan.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/santest.html',
+                template: `${TEMPLATE_PATH}/loginsan/santest.html`,
+                // template: `${TEMPLATE_PATH}/home.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/mypage.html',
+                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/changemypage.html',
+                template: `${TEMPLATE_PATH}/mypage/changemypage.html`,
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'join/join.html',
+                template: `${TEMPLATE_PATH}/join/join.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'join/join_succeed.html',
+                template: `${TEMPLATE_PATH}/join/join_succeed.html`,
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'found/found.html',
+                template: `${TEMPLATE_PATH}/found/found.html`,
+            })
+            // new BundleAnalyzerPlugin()
         ],
         optimization: {
             runtimeChunk: 'single' // chunk 변경시 매번 새로고침하기 불편해서 적용
