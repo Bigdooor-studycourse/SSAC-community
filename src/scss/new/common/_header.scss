@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  width: 1280px;
+  font-size: 18px;
+}
+.wrap {
+  width: 100%;
+  min-width: 1280px;
+  display: inline-block;
+}
+.home {
+  width: 53px;
+}
+i {
+  margin: 23px 53px;
+  border: 1px solid #000;
+}
+.tabmenu {
+  border: 1px solid #000;
+  display: inline-block;
+  height: 100px;
+  right: 0;
+}
+/* common에 넣기 */
+
+
+
+
+input[id=trigger] {
+  display: none;
+}
+label[for=trigger] {
+  width: 35px;
+  height: 32px;
+  display: block;
+  position: absolute;
+  cursor: pointer; 
+  right: 23px;
+  /* label[for=trigger] span의 left값을 53px에서 빼줌 */
+  top: 39px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+label[for=trigger] span {
+  position: absolute;
+  height: 5px; 
+  background-color: #000;
+  width: 100%;
+  left: -30px;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+label[for=trigger] span:nth-child(1) {
+  top: 0;
+}
+label[for=trigger] span:nth-child(2) {
+  top: 50%;
+}
+label[for=trigger] span:nth-child(3) {
+  top: 100%;
+}
+
+.sidebar {
+  width: 309px;
+  height: 100%;
+  position: fixed;
+  right: -330px;
+  transition: 0.3s;
+  color: #fff;
+  border-radius: 50px 0 0 50px;
+  border: 4px solid #000;
+}
+
+input[id=trigger]:checked + label[for=trigger] span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+input[id=trigger]:checked + label[for=trigger] span:nth-child(2) {
+  opacity: 0;
+}
+input[id=trigger]:checked + label[for=trigger] span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+input[id=trigger]:checked ~ .sidebar {
+  right: 0;
+  z-index: 2;
+}
+input[id=trigger]:checked + label[for=trigger] {
+  display: none;
+}
+
+.contents {
+  display: block;
+  border: 1px solid red;
+}
+h2 {
+  text-align: center;
+}
+.content {
+  border: 1px solid #000;
+  width: 196px;
+  height: 398px;
+  display: inline-block;
+  border-radius: 50% 50% 50% 50% / 25% 25% 0% 0% ;
+  position: relative;
+}
+.board {
+  margin-top: 61px;
+  margin-left: 305px;
+}
+.project {
+  margin-top: 181px;
+  margin-left: 41px;
+}
+.evaluation {
+  margin-top: 116px;
+  margin-left: 41px;
+}
+.title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* border: 1px solid #000; */
+  padding-bottom: 19px;
+  font-weight: bold;
+}
