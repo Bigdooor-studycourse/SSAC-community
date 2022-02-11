@@ -7,16 +7,14 @@ const _changeProcess = document.querySelector(".my_page_change_process");
 
 
 
-
-
-
-
-
 // API
 
 const page_url = `https://d0ab52b3-193e-4494-a62f-48f4a76231e4.mock.pstmn.io/`
 
 
+const setCampus = () => {};
+
+const setProcess = () => {};
 
 const firstinit = (e) => {
     fetch(page_url)
@@ -24,6 +22,8 @@ const firstinit = (e) => {
     .then((data) => {
         console.log(data);
         _userName.placeholder = data[0].nickname;
+        setCampus();
+        setProcess();
 
     })
     .catch((err) => console.log(err));
