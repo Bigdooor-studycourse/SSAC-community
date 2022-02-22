@@ -6,7 +6,7 @@ let nameValue = [];
 let emailValue = [];
 let phoneValue = [];
 let userNick = '';
-const url = `https://d0ab52b3-193e-4494-a62f-48f4a76231e4.mock.pstmn.io/`
+const url = process.env.TEST_API_URL;
 fetch(url).then((response) => response.json()).then((data) => {
     for(const element of data){
         nameValue.push(element.nickname);

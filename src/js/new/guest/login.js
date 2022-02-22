@@ -1,4 +1,4 @@
-const API_URL = `https://d0ab52b3-193e-4494-a62f-48f4a76231e4.mock.pstmn.io/`;
+const API_URL = process.env.TEST_API_URL;
 const _get = (target) => {
   return document.querySelector(target);
 }
@@ -23,14 +23,11 @@ const _login = (e) => {
           sessionStorage.setItem("currentUser",JSON.stringify(userInfo))
           location.assign('/index.html')
           return
+        } else if(_idInputValue !== userInfo.email && _pwInputValue !== userInfo.password) {
+          console.log('로그인에 실패하였습니다.')
+          alert('아이디 및 비밀번호를 확인해주세요.')
+          return
         }
-        // else {
-        //   console.log('로그인에 실패하였습니다.')
-        //   alert('아이디 및 비밀번호를 확인해주세요.')
-        //   return
-        // }
-        // if(_idInputValue !== userInfo.email && _pwInputValue !== userInfo.password){
-        // }
       })
     })
     .catch((err) => console.error(err))
